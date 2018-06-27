@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PUNCH OUT</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div id="menu">
+      <div id="main">
+        <div class="overlay"></div>
+        <h1>PUNCH OUT!</h1>
+        <ul>
+          <li>
+            <a href="javascript:void(0)" class="button play">Start Game</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="howToPlay">
+      <div id='Mike'>
+        <h1>Mike Tyson</h1>
+        <img src='img/giphy.gif'>
+        <div>
+          <img id="keyboardTyson" src='img/PlayerTysonControl.png'>
+        </div>
+        <h3> E for attack</h3>
+      </div>
+      <div id='Mac'>
+        <h1>Little Mac</h1>
+        <img id="macGif" src='img/mac.gif'>
+        <div>
+          <img id='keyboardMac' src='img/arrows.png'>
+        </div>
+        <h3>Spacebar for attack</h3>
+      </div>
+    </div>
+    <canvas id="canvas" width="700" height="600"></canvas>
+  </div>
+
+  <script type="text/javascript" src="js/game.js"></script>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/visualEffect.js"></script>
+  <script type="text/javascript" src="js/background.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

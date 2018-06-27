@@ -1,0 +1,149 @@
+body{
+    font-family: 'Press Start 2P', cursive;
+}
+
+@font-face{
+    font-family: 'Press Start 2P', cursive;
+    src: url('PressStart2P.ttf');
+}
+
+.wrapper {
+    width: 700px;
+    height: 600px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+@keyframes panning {
+    0% {
+      background-position: 10% 0%;
+    }
+    25% {
+      background-position: 90% 90%;
+    }
+    50% {
+      background-position: 90% 10%;
+    }
+    75% {
+      background-position: 10 90%;
+    }
+    100% {
+      background-position: 10% 10%;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+li {
+    padding: 10px 0;
+} 
+a {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+#menu {
+    position: relative;
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    z-index: 2;
+    text-align: center;
+    background-image: url('../img/mike_tysons_punchout.0.jpg'); 
+    animation: panning 15s infinite linear;
+}
+
+#main{
+    padding-top: 200px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: -1;
+}
+
+#main h1 {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background-color: rgb(1, 9, 21);
+    background-image: -webkit-linear-gradient(bottom,blue 0%, blue 100%);
+    background-image:         linear-gradient(to bottom, rgb(24, 1, 12) 0%, blue 100%);
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #B30D5D;
+    background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
+    background-image:         linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
+}
+
+#canvas{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url('../img/ring.png');
+    background-size: 700px,600px;
+}
+
+#howToPlay{
+    width: 700px;
+    height: 600px;
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+#Mike{
+    width: 50%;
+    color:tomato;
+}
+
+#Mac{
+    color:lime;
+}
+
+#macGif{
+    padding-top: 35px;
+    width:70%;
+}
+
+#keyboardTyson{
+    width:50%;
+    padding-top: 10px;
+}
+
+#keyboardMac{
+    padding-top: 50px;
+    width:40%;
+}
+
+h3{
+    line-height: 30px;
+}
