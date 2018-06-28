@@ -1,8 +1,7 @@
 $(document).ready(function () {
     var game = new Game("canvas");
     loadSound();
-    var bgAudio = new Audio('sounds/backgroundmusic.mp3');
-    bgAudio.play();
+    
     $('.play').click(function () {
         createjs.Sound.play('button');
         $('#menu').hide();
@@ -35,6 +34,7 @@ function loadSound() {
         { src: "button.mp3", id: 'button'},
         { src: "backgroundmusic.mp3", id: 'backgroundmusic'}
     ];
-    createjs.Sound.registerSounds(sounds, assetsPath);
-    //createjs.Sound.play('backgroundmusic');
+    createjs.Sound.registerSounds(sounds, assetsPath); 
+    var bgAudio = new Audio('sounds/backgroundmusic.mp3');
+    bgAudio.play();
 }

@@ -32,7 +32,7 @@ Background.prototype.clock = function () {
         this.game.ctx.fillText('0:' + seconds, 565, 78);
     } else {
         this.game.ctx.fillText('0:30', 565, 78);
-        if (this.game.player1.life == this.game.player2.life) {
+        if (this.game.player1.life == this.game.player2.life && this.game.cancelKeysIfWin == false) {
             this.game.isOver('empate');
             this.game.cancelKeysIfWin = true;
             this.game.winnerText = 'Empate!!!'
