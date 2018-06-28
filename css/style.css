@@ -140,10 +140,19 @@ a {
 }
 
 #keyboardMac{
-    padding-top: 50px;
+    padding-top: 55px;
     width:40%;
 }
 
 h3{
     line-height: 30px;
+}
+
+#game-over {
+    display: none;
+    position: relative;
+    z-index: 2;
+    padding-top: 560px;
+    padding-left: 482px;
+    text-align: center;
 }

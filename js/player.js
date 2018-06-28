@@ -44,6 +44,7 @@ Player.prototype.draw = function () {
 
     var row = Math.floor(this.animationSequence[this.currentFrame] / (this.framesPerRow));
     var col = Math.floor(this.animationSequence[this.currentFrame] % (this.framesPerRow));
+    var adjust = 0;
     this.game.ctx.drawImage(
         this.image,
         col * this.frameWidth, row * this.frameHeight+2.5,//source image location
