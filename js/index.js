@@ -47,6 +47,7 @@ function loadSound() {
     ];
     createjs.Sound.registerSounds(sounds, assetsPath); 
     bgAudio = new Audio('sounds/backgroundmusic.mp3');
-    bgAudio.play()
+    bgAudio.play();
+    bgAudio.loop=true;
 }
 var bgAudio;

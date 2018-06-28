@@ -27,15 +27,15 @@ Game.prototype.reset = function () {
     this.player1Hit = false;
     this.player2Hit = false;
     this.background = new Background(this);
-    this.player1 = new Player(this, 'img/Tyson.png', 77, 116.8, 8, 0, 3, 400, 200, 4, 1, 1.5);//game, playerSrc, frameWidth, frameHeight, frameSpeed, startFrame, endFrame, x, y,famesperRow,player#,scale
-    this.player2 = new Player(this, 'img/LittleMac.png', 69.25, 137, 8, 0, 3, 200, 300, 4, 2, 1.3);
+    this.player1 = new Player(this, 'img/Tyson.png', 77, 116.8, 6, 0, 3, 400, 200, 4, 1, 1.5);//game, playerSrc, frameWidth, frameHeight, frameSpeed, startFrame, endFrame, x, y,famesperRow,player#,scale
+    this.player2 = new Player(this, 'img/LittleMac.png', 69.25, 137, 6, 0, 3, 200, 300, 4, 2, 1.3);
     this.sailorMoon = new Player(this, 'img/sailorMoon.png', 197.33, 418, 8, 0, 2, 550, 350, 6, 3, 0.5);
     //this.effect1 = new visualEffect(this, this.player1, 'img/Fire.png', 1);//game, player, src, scale
     this.listeners();
 };
 
 Game.prototype.startGame = function () {
-    setTimeout(function(){ createjs.Sound.play('bell'); }, 1000);
+    setTimeout(function () { createjs.Sound.play('bell'); }, 1000);
     this.roundInterval = setInterval(function () {
         this.roundY -= 7;
         if (this.roundNumber == 1) {
@@ -67,9 +67,19 @@ Game.prototype.startPlay = function () {
             this.seconds++;
         }
         if (this.roundNumber == 4 && this.changeRound == false && this.cancelKeysIfWin == true) {
-            this.gameOverText = 'Well done! A Tie!';
-            this.endGame();
-            this.changeRound = true;
+            if (this.gamesWonPlayer1 > this.gamesWonPlayer2) {
+                this.gameOverText = 'Winner is Mike Tyson !!!';
+                this.endGame();
+                this.changeRound = true;
+            } else if (this.gamesWonPlayer1 < this.gamesWonPlayer2) {
+                this.gameOverText = 'Winner is Little Mac !!!';
+                this.endGame();
+                this.changeRound = true;
+            } else {
+                this.gameOverText = 'Well done! A Tie!';
+                this.endGame();
+                this.changeRound = true;
+            }
         } else if (this.cancelKeysIfWin == true && this.changeRound == false && this.roundNumber <= 3) {
             if (this.gamesWonPlayer1 == 2 || this.gamesWonPlayer2 == 2) {
                 if (this.gamesWonPlayer1 > this.gamesWonPlayer2) {
@@ -86,7 +96,7 @@ Game.prototype.startPlay = function () {
                     clearInterval(this.interval);
                     this.nextRound();
                 }.bind(this), 5000);
-                this.changeRound = true;             
+                this.changeRound = true;
             }
         }
         this.clear();
@@ -230,13 +240,13 @@ Game.prototype.listeners = function () {
                     case 68: this.player1.speedX += 1; break;
                     case 87: this.player1.speedY -= 1; break;
                     case 83: this.player1.speedY += 1; break;
-                    case 69: 
-                        this.player1.startFrame = 4; 
-                        this.player1.endFrame = 7; 
+                    case 69:
+                        this.player1.startFrame = 4;
+                        this.player1.endFrame = 7;
                         this.player1.attack();
-                        if (this.player1Hit == true){
+                        if (this.player1Hit == true) {
                             createjs.Sound.play('punch')
-                        };  
+                        };
                         break;
                 }
             } else {
@@ -260,13 +270,13 @@ Game.prototype.listeners = function () {
                     case 39: this.player2.speedX += 1; break;
                     case 38: this.player2.speedY -= 1; break;
                     case 40: this.player2.speedY += 1; break;
-                    case 16: 
+                    case 16:
                         this.player2.startFrame = 4;
                         this.player2.endFrame = 7;
-                        this.player2.attack(); 
-                        if (this.player2Hit == true){
+                        this.player2.attack();
+                        if (this.player2Hit == true) {
                             createjs.Sound.play('punch')
-                        }; 
+                        };
                         break;
                 }
             } else {
