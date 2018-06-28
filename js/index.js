@@ -13,6 +13,15 @@ $(document).ready(function () {
         }, 4000)
     });
 
+    $('.sound').click(function(){
+        $(this).toggleClass('sound-on sound-off');
+        if ($(this).hasClass('sound-off')){
+            bgAudio.pause();
+        } else {
+            bgAudio.play();
+        }
+    })
+
     $('.restart').click(function () {
         createjs.Sound.play('button');
         $('#game-over').hide();
@@ -21,6 +30,8 @@ $(document).ready(function () {
         }, 500)
     });
 });
+
+var instance;
 
 function loadSound() {
     if (!createjs.Sound.initializeDefaultPlugins()) {
@@ -32,9 +43,10 @@ function loadSound() {
         { src: "cheer.mp3", id: 'cheer' },
         { src: "bell.mp3", id: 'bell' },
         { src: "button.mp3", id: 'button'},
-        { src: "backgroundmusic.mp3", id: 'backgroundmusic'}
+        //{ src: "backgroundmusic.mp3", id: 'backgroundmusic'}
     ];
     createjs.Sound.registerSounds(sounds, assetsPath); 
-    var bgAudio = new Audio('sounds/backgroundmusic.mp3');
-    bgAudio.play();
+    bgAudio = new Audio('sounds/backgroundmusic.mp3');
+    bgAudio.play()
 }
+var bgAudio;

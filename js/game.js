@@ -183,7 +183,7 @@ Game.prototype.calculateLifeP1 = function () {
         this.player1.x >= this.player2.attackRangeX[0] &&
         this.player1.y >= this.player2.attackRangeY[0] &&
         this.player1.y <= this.player2.attackRangeY[1]) {
-        this.player1.life -= 0.5;
+        this.player1.life -= 0.2;
         this.player2Hit = true;
     }
 }
@@ -193,7 +193,7 @@ Game.prototype.calculateLifeP2 = function () {
         this.player2.x >= this.player1.attackRangeX[0] &&
         this.player2.y >= this.player1.attackRangeY[0] &&
         this.player2.y <= this.player1.attackRangeY[1]) {
-        this.player2.life -= 0.5;
+        this.player2.life -= 0.2;
         this.player1Hit = true;
     }
 }
@@ -290,7 +290,7 @@ Game.prototype.listeners = function () {
                 this.player1.speedY = 0;
                 this.player1.startFrame = this.player1.initialStart;
                 this.player1.endFrame = this.player1.initialEnd;
-                if (this.player2.life <= 0) {
+                if (Math.floor(this.player2.life) <= 0) {
                     this.isOver(this.player1);
                     this.cancelKeysIfWin = true;
                     this.winnerText = 'Mike Tyson Wins!!!';
@@ -303,7 +303,7 @@ Game.prototype.listeners = function () {
                 this.player2.speedY = 0;
                 this.player2.startFrame = this.player2.initialStart;
                 this.player2.endFrame = this.player2.initialEnd;
-                if (this.player1.life <= 0) {
+                if (Math.floor(this.player1.life) <= 0) {
                     this.isOver(this.player2);
                     this.cancelKeysIfWin = true;
                     this.winnerText = 'Little Mac Wins!!!';
