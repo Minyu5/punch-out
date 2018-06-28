@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    document.body.style.background = "url('img/board.png') no-repeat 73px 20px";
     var game = new Game("canvas");
     loadSound();
     
@@ -32,6 +33,7 @@ $(document).ready(function () {
 });
 
 var instance;
+var bgAudio;
 
 function loadSound() {
     if (!createjs.Sound.initializeDefaultPlugins()) {
@@ -50,4 +52,3 @@ function loadSound() {
     bgAudio.play();
     bgAudio.loop=true;
 }
-var bgAudio;
