@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var game = new Game("canvas");
     loadSound();
-    createjs.Sound.play('backgroundmusic');
+    var bgAudio = new Audio('sounds/backgroundmusic.mp3');
+    bgAudio.play();
     $('.play').click(function () {
         createjs.Sound.play('button');
         $('#menu').hide();
@@ -16,7 +17,9 @@ $(document).ready(function () {
     $('.restart').click(function () {
         createjs.Sound.play('button');
         $('#game-over').hide();
-        location.reload();
+        setTimeout(function(){
+            location.reload();
+        }, 500)
     });
 });
 
@@ -33,4 +36,5 @@ function loadSound() {
         { src: "backgroundmusic.mp3", id: 'backgroundmusic'}
     ];
     createjs.Sound.registerSounds(sounds, assetsPath);
+    //createjs.Sound.play('backgroundmusic');
 }
