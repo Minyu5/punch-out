@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var game = new Game("canvas");
     loadSound();
+    createjs.Sound.play('backgroundmusic');
     $('.play').click(function () {
         createjs.Sound.play('button');
         $('#menu').hide();
@@ -29,6 +30,7 @@ function loadSound() {
         { src: "cheer.mp3", id: 'cheer' },
         { src: "bell.mp3", id: 'bell' },
         { src: "button.mp3", id: 'button'},
+        { src: "backgroundmusic.mp3", id: 'backgroundmusic'}
     ];
     createjs.Sound.registerSounds(sounds, assetsPath);
 }
