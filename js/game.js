@@ -30,7 +30,6 @@ Game.prototype.reset = function () {
     this.player1 = new Player(this, 'img/Tyson.png', 77, 116.8, 6, 0, 3, 400, 200, 4, 1, 1.5);//game, playerSrc, frameWidth, frameHeight, frameSpeed, startFrame, endFrame, x, y,famesperRow,player#,scale
     this.player2 = new Player(this, 'img/LittleMac.png', 69.25, 137, 6, 0, 3, 200, 300, 4, 2, 1.3);
     this.sailorMoon = new Player(this, 'img/sailorMoon.png', 197.33, 418, 8, 0, 2, 550, 350, 6, 3, 0.5);
-    //this.effect1 = new visualEffect(this, this.player1, 'img/Fire.png', 1);//game, player, src, scale
     this.listeners();
 };
 
@@ -119,10 +118,6 @@ Game.prototype.drawALL = function () {
     } else if (this.cancelKeysIfWin == true) {
         this.background.winDraw(this.winnerText);
     }
-    if (this.player1.startFrame == 4) {
-        //this.effect1.draw();
-        //setTimeout(this.effect1.draw(-70),500);
-    }
     if (this.gameOver == true) {
         this.sailorMoon.draw();
     }
@@ -136,8 +131,6 @@ Game.prototype.updateALL = function () {
         this.calculateLifeP2();
     } else if (this.player1.startFrame == 4) {
         this.calculateLifeP2();
-        //this.effect1.update();
-        //setTimeout(this.effect1.update(),500);
     } else if (this.player2.startFrame == 4) {
         this.calculateLifeP1();
     }
@@ -193,7 +186,7 @@ Game.prototype.calculateLifeP1 = function () {
         this.player1.x >= this.player2.attackRangeX[0] &&
         this.player1.y >= this.player2.attackRangeY[0] &&
         this.player1.y <= this.player2.attackRangeY[1]) {
-        this.player1.life -= 0.2;
+        this.player1.life -= 0.3;
         this.player2Hit = true;
     }
 }
@@ -203,7 +196,7 @@ Game.prototype.calculateLifeP2 = function () {
         this.player2.x >= this.player1.attackRangeX[0] &&
         this.player2.y >= this.player1.attackRangeY[0] &&
         this.player2.y <= this.player1.attackRangeY[1]) {
-        this.player2.life -= 0.2;
+        this.player2.life -= 0.3;
         this.player1Hit = true;
     }
 }

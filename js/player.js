@@ -51,9 +51,6 @@ Player.prototype.draw = function () {
         this.frameWidth, this.frameHeight,
         this.x, this.y, //canvas location
         this.frameWidth * this.scale, this.frameHeight * this.scale);
-    /*this.game.ctx.beginPath();
-    this.game.ctx.arc(this.x+this.frameWidth * this.scale/2,this.y+this.frameHeight * this.scale,50,0,2*Math.PI);
-    this.game.ctx.stroke();*/
 };
 
 Player.prototype.attack = function(){

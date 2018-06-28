@@ -110,8 +110,9 @@ Background.prototype.winDraw = function (text) {
 
 Background.prototype.gameOverDraw = function (text) {
     this.game.ctx.font = '23px "Press Start 2P"';
-    this.game.ctx.fillStyle = 'gold';
-
+    this.game.ctx.fillStyle = 'hotpink';
+    this.game.ctx.shadowBlur = 10;
+    this.game.ctx.shadowColor = "white";
     this.game.ctx.fillText(text, this.textXpos1, 300);
     this.game.ctx.fillText(text, this.textXpos2, 300);
 }

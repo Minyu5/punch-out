@@ -1,5 +1,10 @@
 body{
     font-family: 'Press Start 2P', cursive;
+    background-image: url('../img/board.png');
+    background-size: 1300px,750px;
+    background-repeat: no-repeat;
+    background-position-x: 73px;
+    background-position-y: 20px;
 }
 
 @font-face{
@@ -12,7 +17,9 @@ body{
     height: 600px;
     position: absolute;
     top: 5px;
-    left: 5px;
+    left: 50%;
+    margin-left:-370px;
+    margin-top:65px;
 }
 
 @keyframes panning {
@@ -111,8 +118,8 @@ a {
 }
 
 #howToPlay{
-    width: 700px;
-    height: 600px;
+    width: 670px;
+    height: 570px;
     display: none;
     background-color: black;
     color: white;
@@ -123,6 +130,7 @@ a {
 #Mike{
     width: 50%;
     color:tomato;
+    height: 600px;
 }
 
 #Mac{
