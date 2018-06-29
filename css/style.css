@@ -143,12 +143,16 @@ a {
 }
 
 #keyboardMac{
-    padding-top: 55px;
+    padding-top: 65px;
     width:40%;
 }
 
 h3{
     line-height: 30px;
+}
+
+#macinstruction{
+    padding-top:13px;
 }
 
 #game-over {

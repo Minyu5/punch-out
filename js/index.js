@@ -45,7 +45,6 @@ function loadSound() {
         { src: "cheer.mp3", id: 'cheer' },
         { src: "bell.mp3", id: 'bell' },
         { src: "button.mp3", id: 'button'},
-        //{ src: "backgroundmusic.mp3", id: 'backgroundmusic'}
     ];
     createjs.Sound.registerSounds(sounds, assetsPath); 
     bgAudio = new Audio('sounds/backgroundmusic.mp3');
