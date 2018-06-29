@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    document.body.style.background = "url('img/board.png') no-repeat 73px 20px";
+    document.body.style.background = "url('img/board.png') no-repeat center 20px";
     var game = new Game("canvas");
     loadSound();
     
