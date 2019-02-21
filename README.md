@@ -1,8 +1,13 @@
 # PUNCH OUT!
 (inspired by the Nintendo version)
 New rendition of the classic Nintendo Punch Out! game
-
-![alt text](https://github.com/Minyu5/punch-out/blob/master/img/rdimg.png)
+## Demo
+<p align="center">
+  <img src="PunchOut demo.png" width="70%"/>
+</p>
+<p align="center">
+  <img src="PunchOut demo 2.png" width="70%"/>
+</p>
 
 https://minyu5.github.io/punch-out/
 
@@ -10,4 +15,4 @@ https://minyu5.github.io/punch-out/
 
 Beltrán &  Verónica 💜💜💜
 
-### Ready? Fight! 😁
+### Ready?!! Fight! 😁
