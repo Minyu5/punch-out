@@ -1,7 +1,10 @@
 # PUNCH OUT!
+<p align="center">
+  <img src="punchout-demo.gif" width="70%"/>
+</p>
 (inspired by the Nintendo version)
 New rendition of the classic Nintendo Punch Out! game
-## Demo
+## Screen display
 <p align="center">
   <img src="PunchOut demo.png" width="70%"/>
 </p>
