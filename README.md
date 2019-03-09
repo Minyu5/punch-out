@@ -4,6 +4,7 @@
 </p>
 (inspired by the Nintendo version)
 New rendition of the classic Nintendo Punch Out! game
+
 ## Screen display
 <p align="center">
   <img src="PunchOut demo.png" width="70%"/>
